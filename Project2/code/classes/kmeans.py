@@ -92,6 +92,7 @@ class KMeans():
         ax.legend()
         ax.set_title('K = {} Strategy = {}'.format(str(self.num_clusters),str(self.strategy)))
         plt.savefig("scatter_plot_{}_{}".format(self.num_clusters,self.strategy))
+        plt.clf()
         # plt.show()
     
     def plot_centroids(self):

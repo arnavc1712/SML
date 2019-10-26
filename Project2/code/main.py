@@ -1,7 +1,7 @@
 from classes.kmeans import KMeans
 import os
 import matplotlib.pyplot as plt
-data_path = os.path.join(os.getcwd(), "./code/AllSamples.mat")
+data_path = os.path.join(os.getcwd(), "./AllSamples.mat")
 
 
 def compute_all_objective_costs(range_clusters,strategy,random_seed):
@@ -32,9 +32,9 @@ def plot_objective_function(random_seed,strategy=1,range_clusters=10):
 
 if __name__ == "__main__":
 	plot_objective_function(strategy=1,range_clusters=10,random_seed=80)
-	# plot_objective_function(strategy=1,range_clusters=10,random_seed=20)
+	plot_objective_function(strategy=1,range_clusters=10,random_seed=20)
 	plot_objective_function(strategy=2,range_clusters=10,random_seed=80)
-	# plot_objective_function(strategy=2,range_clusters=10,random_seed=20)
+	plot_objective_function(strategy=2,range_clusters=10,random_seed=20)
 
 
 	
