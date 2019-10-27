@@ -2,6 +2,7 @@ import numpy as np
 import scipy.io
 import random
 import sys
+import os
 from collections import defaultdict
 from matplotlib import pyplot as plt
 from copy import deepcopy
@@ -91,7 +92,7 @@ class KMeans():
             ax.scatter(x[ix], y[ix], label = g, s = 100,cmap="viridis")
         ax.legend()
         ax.set_title('K = {} Strategy = {}'.format(str(self.num_clusters),str(self.strategy)))
-        plt.savefig("scatter_plot_{}_{}".format(self.num_clusters,self.strategy))
+        plt.savefig(os.path.join(os.getcwd(),"./images/scatter_plot_{}_{}".format(self.num_clusters,self.strategy)))
         plt.clf()
         # plt.show()
     

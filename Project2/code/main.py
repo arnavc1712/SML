@@ -27,7 +27,7 @@ def plot_objective_function(random_seed,strategy=1,range_clusters=10):
     plt.legend(['Strategy_{}'.format(str(strategy))])
     plt.xlabel('Number of clusters')
     plt.ylabel('Objective Cost')
-    plt.savefig("Objective_function_{}_{}".format(str(strategy),str(random_seed)))
+    plt.savefig(os.path.join(os.getcwd(),"./images/Objective_function_{}_{}".format(str(strategy),str(random_seed))))
     # plt.show();
 
 if __name__ == "__main__":
