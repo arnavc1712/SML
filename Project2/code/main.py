@@ -14,7 +14,7 @@ def compute_all_objective_costs(range_clusters,strategy,random_seed):
     for i in range(2,range_clusters+1):
         k = KMeans(i,data_path,random_seed=random_seed,strategy=strategy)
         k.kmeans()
-        k.plot_points()
+        # k.plot_points()
         cost = k.objective_function()
         all_costs.append(cost)
         print("For {} Clusters: {}".format(str(i),str(round(cost,5))))
