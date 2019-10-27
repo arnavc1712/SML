@@ -7,6 +7,8 @@ from collections import defaultdict
 from matplotlib import pyplot as plt
 from copy import deepcopy
 
+cur_dir = os.path.dirname(os.path.abspath(__file__))
+
 
 ## Class for KMeans
 ## Parameters: Number of clusters, data path, Strategy to initialize clusters
@@ -92,7 +94,7 @@ class KMeans():
             ax.scatter(x[ix], y[ix], label = g, s = 100,cmap="viridis")
         ax.legend()
         ax.set_title('K = {} Strategy = {}'.format(str(self.num_clusters),str(self.strategy)))
-        plt.savefig(os.path.join(os.getcwd(),"./images/scatter_plot_{}_{}".format(self.num_clusters,self.strategy)))
+        # plt.savefig(os.path.join(cur_dir,"../images/scatter_plot_{}_{}".format(self.num_clusters,self.strategy)))
         plt.clf()
         # plt.show()
     
