@@ -36,6 +36,7 @@ def plot_objective_function(random_seed,strategy=1,range_clusters=10):
     plt.ylabel('Objective Cost')
     plt.savefig(os.path.join(cur_dir,"./images/Objective_function_{}_{}".format(str(strategy),str(random_seed))))
     # plt.show();
+    plt.close()
 
 if __name__ == "__main__":
 	plot_objective_function(strategy=1,range_clusters=10,random_seed=80)
